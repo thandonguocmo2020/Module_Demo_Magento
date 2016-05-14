@@ -1,0 +1,33 @@
+<a href="http://niithanoi.vn"><img src="http://niithanoi.vn/images/logoict.png"></a>
+<h2>Exchange rate from Vietcombank</h2>
+<?php
+	$url = 'https://www.vietcombank.com.vn/exchangerates/ExrateXML.aspx';
+	$ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    $st = curl_exec($ch);
+    curl_close($ch);
+
+$v = simplexml_load_string($st);
+
+?>
+<table border="1">
+<tr>
+<th>Current code</th>
+<th>Buy</th>
+<th>Transfer</th>
+<th>Sell</th>
+</tr>
+<?php
+foreach($v->Exrate as $item)
+{
+?>
+<tr>
+<td><?php echo $item['CurrencyCode']?></td>
+<td><?php echo $item['Buy']?></td>
+<td><?php echo $item['Transfer']?></td>
+<td><?php echo $item['Sell']?></td>
+</tr>
+<?php } ?>
+</table>

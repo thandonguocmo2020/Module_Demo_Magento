@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="NIIT_Demo" setup_version="1.0.0"></module>
+    <!-- 
+II. khai bao ten cua module - khai bao version chi dc tang ko dc giam khi nang cap
+
+    -->
+</config>

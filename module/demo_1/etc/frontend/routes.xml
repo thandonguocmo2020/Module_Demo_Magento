@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <!--  -->
+        <route id="demo" frontName="demo">
+            <!-- 
+    Chi hien thi trong module nay
+    id phan biet dinh danh rieng
+    // frontName => xac dinh cach goi trong module
+            -->
+            <module name="NIIT_Demo" />
+            <!-- Goi den Module sau do controller tu dong goi class index.php -->
+        </route>
+    </router>
+</config>
+
+<!-- ra ngoai dang ky o cmd window -->
+
+<!-- C:\xampp\htdocs\magento\bin>\xampp\php\php.exe magento setup:upgrade
+ -->

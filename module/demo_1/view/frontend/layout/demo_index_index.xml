@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- //  chu y name cua referenceContainer = id khoi cha
+       //  chon khoi cha name la content
+       // chon khoi con la demo 
+    --> 
+        <referenceContainer name="content">
+            
+            <!-- class == goi khoi cua block tai demo_1/Block/demo.php
+             sau do goi den template o  view/demo.phtml -->
+             
+            <block class="NIIT\Demo\Block\Demo" name="demo" template="NIIT_Demo::demo.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
